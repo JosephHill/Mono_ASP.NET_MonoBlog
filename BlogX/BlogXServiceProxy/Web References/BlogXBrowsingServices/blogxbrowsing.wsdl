@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.simplegeek.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://www.simplegeek.com" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.simplegeek.com">
+      <s:element name="GetRssUrl">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetRssUrlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRssUrlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRss">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetRssResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRssResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRssCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="categoryName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRssCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRssCategoryResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRssWithDayCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maxDayCount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRssWithDayCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRssWithDayCountResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReferrerLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReferrerLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReferrerLogResult" type="s0:ArrayOfLogDataItem" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLogDataItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LogDataItem" nillable="true" type="s0:LogDataItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LogDataItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UrlRequested" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UrlReferrer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserAgent" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Requested" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCategoryList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCategoryListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCategoryListResult" type="s0:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCategoryEntries">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="categoryName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategoryEntriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCategoryEntriesResult" type="s0:ArrayOfEntry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEntry">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Entry" nillable="true" type="s0:Entry" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Entry">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:EntryBase">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Categories" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="EntryBase">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Content" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Created" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Modified" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="EntryId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDaysWithEntries">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDaysWithEntriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDaysWithEntriesResult" type="s0:ArrayOfDateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDateTime">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="dateTime" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDayEntry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDayEntryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDayEntryResult" type="s0:DayEntry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DayEntry">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Entries" type="s0:ArrayOfEntry" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDayExtra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDayExtraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDayExtraResult" type="s0:DayExtra" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DayExtra">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s0:ArrayOfComment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfComment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Comment" nillable="true" type="s0:Comment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Comment">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:EntryBase">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="TargetEntryId" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Author" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AuthorEmail" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AuthorHomepage" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="AddComment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="comment" type="s0:Comment" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCommentResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="ArrayOfLogDataItem" nillable="true" type="s0:ArrayOfLogDataItem" />
+      <s:element name="ArrayOfString" nillable="true" type="s0:ArrayOfString" />
+      <s:element name="ArrayOfEntry" nillable="true" type="s0:ArrayOfEntry" />
+      <s:element name="ArrayOfDateTime" nillable="true" type="s0:ArrayOfDateTime" />
+      <s:element name="DayEntry" nillable="true" type="s0:DayEntry" />
+      <s:element name="DayExtra" nillable="true" type="s0:DayExtra" />
+    </s:schema>
+  </types>
+  <message name="GetRssUrlSoapIn">
+    <part name="parameters" element="s0:GetRssUrl" />
+  </message>
+  <message name="GetRssUrlSoapOut">
+    <part name="parameters" element="s0:GetRssUrlResponse" />
+  </message>
+  <message name="GetRssSoapIn">
+    <part name="parameters" element="s0:GetRss" />
+  </message>
+  <message name="GetRssSoapOut">
+    <part name="parameters" element="s0:GetRssResponse" />
+  </message>
+  <message name="GetRssCategorySoapIn">
+    <part name="parameters" element="s0:GetRssCategory" />
+  </message>
+  <message name="GetRssCategorySoapOut">
+    <part name="parameters" element="s0:GetRssCategoryResponse" />
+  </message>
+  <message name="GetRssWithDayCountSoapIn">
+    <part name="parameters" element="s0:GetRssWithDayCount" />
+  </message>
+  <message name="GetRssWithDayCountSoapOut">
+    <part name="parameters" element="s0:GetRssWithDayCountResponse" />
+  </message>
+  <message name="GetReferrerLogSoapIn">
+    <part name="parameters" element="s0:GetReferrerLog" />
+  </message>
+  <message name="GetReferrerLogSoapOut">
+    <part name="parameters" element="s0:GetReferrerLogResponse" />
+  </message>
+  <message name="GetCategoryListSoapIn">
+    <part name="parameters" element="s0:GetCategoryList" />
+  </message>
+  <message name="GetCategoryListSoapOut">
+    <part name="parameters" element="s0:GetCategoryListResponse" />
+  </message>
+  <message name="GetCategoryEntriesSoapIn">
+    <part name="parameters" element="s0:GetCategoryEntries" />
+  </message>
+  <message name="GetCategoryEntriesSoapOut">
+    <part name="parameters" element="s0:GetCategoryEntriesResponse" />
+  </message>
+  <message name="GetDaysWithEntriesSoapIn">
+    <part name="parameters" element="s0:GetDaysWithEntries" />
+  </message>
+  <message name="GetDaysWithEntriesSoapOut">
+    <part name="parameters" element="s0:GetDaysWithEntriesResponse" />
+  </message>
+  <message name="GetDayEntrySoapIn">
+    <part name="parameters" element="s0:GetDayEntry" />
+  </message>
+  <message name="GetDayEntrySoapOut">
+    <part name="parameters" element="s0:GetDayEntryResponse" />
+  </message>
+  <message name="GetDayExtraSoapIn">
+    <part name="parameters" element="s0:GetDayExtra" />
+  </message>
+  <message name="GetDayExtraSoapOut">
+    <part name="parameters" element="s0:GetDayExtraResponse" />
+  </message>
+  <message name="AddCommentSoapIn">
+    <part name="parameters" element="s0:AddComment" />
+  </message>
+  <message name="AddCommentSoapOut">
+    <part name="parameters" element="s0:AddCommentResponse" />
+  </message>
+  <message name="GetRssUrlHttpGetIn" />
+  <message name="GetRssUrlHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="GetRssHttpGetIn" />
+  <message name="GetRssHttpGetOut">
+    <part name="Body" />
+  </message>
+  <message name="GetRssCategoryHttpGetIn">
+    <part name="categoryName" type="s:string" />
+  </message>
+  <message name="GetRssCategoryHttpGetOut">
+    <part name="Body" />
+  </message>
+  <message name="GetRssWithDayCountHttpGetIn">
+    <part name="maxDayCount" type="s:string" />
+  </message>
+  <message name="GetRssWithDayCountHttpGetOut">
+    <part name="Body" />
+  </message>
+  <message name="GetReferrerLogHttpGetIn">
+    <part name="date" type="s:string" />
+  </message>
+  <message name="GetReferrerLogHttpGetOut">
+    <part name="Body" element="s0:ArrayOfLogDataItem" />
+  </message>
+  <message name="GetCategoryListHttpGetIn" />
+  <message name="GetCategoryListHttpGetOut">
+    <part name="Body" element="s0:ArrayOfString" />
+  </message>
+  <message name="GetCategoryEntriesHttpGetIn">
+    <part name="categoryName" type="s:string" />
+  </message>
+  <message name="GetCategoryEntriesHttpGetOut">
+    <part name="Body" element="s0:ArrayOfEntry" />
+  </message>
+  <message name="GetDaysWithEntriesHttpGetIn" />
+  <message name="GetDaysWithEntriesHttpGetOut">
+    <part name="Body" element="s0:ArrayOfDateTime" />
+  </message>
+  <message name="GetDayEntryHttpGetIn">
+    <part name="date" type="s:string" />
+  </message>
+  <message name="GetDayEntryHttpGetOut">
+    <part name="Body" element="s0:DayEntry" />
+  </message>
+  <message name="GetDayExtraHttpGetIn">
+    <part name="date" type="s:string" />
+  </message>
+  <message name="GetDayExtraHttpGetOut">
+    <part name="Body" element="s0:DayExtra" />
+  </message>
+  <message name="GetRssUrlHttpPostIn" />
+  <message name="GetRssUrlHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="GetRssHttpPostIn" />
+  <message name="GetRssHttpPostOut">
+    <part name="Body" />
+  </message>
+  <message name="GetRssCategoryHttpPostIn">
+    <part name="categoryName" type="s:string" />
+  </message>
+  <message name="GetRssCategoryHttpPostOut">
+    <part name="Body" />
+  </message>
+  <message name="GetRssWithDayCountHttpPostIn">
+    <part name="maxDayCount" type="s:string" />
+  </message>
+  <message name="GetRssWithDayCountHttpPostOut">
+    <part name="Body" />
+  </message>
+  <message name="GetReferrerLogHttpPostIn">
+    <part name="date" type="s:string" />
+  </message>
+  <message name="GetReferrerLogHttpPostOut">
+    <part name="Body" element="s0:ArrayOfLogDataItem" />
+  </message>
+  <message name="GetCategoryListHttpPostIn" />
+  <message name="GetCategoryListHttpPostOut">
+    <part name="Body" element="s0:ArrayOfString" />
+  </message>
+  <message name="GetCategoryEntriesHttpPostIn">
+    <part name="categoryName" type="s:string" />
+  </message>
+  <message name="GetCategoryEntriesHttpPostOut">
+    <part name="Body" element="s0:ArrayOfEntry" />
+  </message>
+  <message name="GetDaysWithEntriesHttpPostIn" />
+  <message name="GetDaysWithEntriesHttpPostOut">
+    <part name="Body" element="s0:ArrayOfDateTime" />
+  </message>
+  <message name="GetDayEntryHttpPostIn">
+    <part name="date" type="s:string" />
+  </message>
+  <message name="GetDayEntryHttpPostOut">
+    <part name="Body" element="s0:DayEntry" />
+  </message>
+  <message name="GetDayExtraHttpPostIn">
+    <part name="date" type="s:string" />
+  </message>
+  <message name="GetDayExtraHttpPostOut">
+    <part name="Body" element="s0:DayExtra" />
+  </message>
+  <portType name="BlogXBrowsingSoap">
+    <operation name="GetRssUrl">
+      <input message="s0:GetRssUrlSoapIn" />
+      <output message="s0:GetRssUrlSoapOut" />
+    </operation>
+    <operation name="GetRss">
+      <input message="s0:GetRssSoapIn" />
+      <output message="s0:GetRssSoapOut" />
+    </operation>
+    <operation name="GetRssCategory">
+      <input message="s0:GetRssCategorySoapIn" />
+      <output message="s0:GetRssCategorySoapOut" />
+    </operation>
+    <operation name="GetRssWithDayCount">
+      <input message="s0:GetRssWithDayCountSoapIn" />
+      <output message="s0:GetRssWithDayCountSoapOut" />
+    </operation>
+    <operation name="GetReferrerLog">
+      <input message="s0:GetReferrerLogSoapIn" />
+      <output message="s0:GetReferrerLogSoapOut" />
+    </operation>
+    <operation name="GetCategoryList">
+      <input message="s0:GetCategoryListSoapIn" />
+      <output message="s0:GetCategoryListSoapOut" />
+    </operation>
+    <operation name="GetCategoryEntries">
+      <input message="s0:GetCategoryEntriesSoapIn" />
+      <output message="s0:GetCategoryEntriesSoapOut" />
+    </operation>
+    <operation name="GetDaysWithEntries">
+      <input message="s0:GetDaysWithEntriesSoapIn" />
+      <output message="s0:GetDaysWithEntriesSoapOut" />
+    </operation>
+    <operation name="GetDayEntry">
+      <input message="s0:GetDayEntrySoapIn" />
+      <output message="s0:GetDayEntrySoapOut" />
+    </operation>
+    <operation name="GetDayExtra">
+      <input message="s0:GetDayExtraSoapIn" />
+      <output message="s0:GetDayExtraSoapOut" />
+    </operation>
+    <operation name="AddComment">
+      <input message="s0:AddCommentSoapIn" />
+      <output message="s0:AddCommentSoapOut" />
+    </operation>
+  </portType>
+  <portType name="BlogXBrowsingHttpGet">
+    <operation name="GetRssUrl">
+      <input message="s0:GetRssUrlHttpGetIn" />
+      <output message="s0:GetRssUrlHttpGetOut" />
+    </operation>
+    <operation name="GetRss">
+      <input message="s0:GetRssHttpGetIn" />
+      <output message="s0:GetRssHttpGetOut" />
+    </operation>
+    <operation name="GetRssCategory">
+      <input message="s0:GetRssCategoryHttpGetIn" />
+      <output message="s0:GetRssCategoryHttpGetOut" />
+    </operation>
+    <operation name="GetRssWithDayCount">
+      <input message="s0:GetRssWithDayCountHttpGetIn" />
+      <output message="s0:GetRssWithDayCountHttpGetOut" />
+    </operation>
+    <operation name="GetReferrerLog">
+      <input message="s0:GetReferrerLogHttpGetIn" />
+      <output message="s0:GetReferrerLogHttpGetOut" />
+    </operation>
+    <operation name="GetCategoryList">
+      <input message="s0:GetCategoryListHttpGetIn" />
+      <output message="s0:GetCategoryListHttpGetOut" />
+    </operation>
+    <operation name="GetCategoryEntries">
+      <input message="s0:GetCategoryEntriesHttpGetIn" />
+      <output message="s0:GetCategoryEntriesHttpGetOut" />
+    </operation>
+    <operation name="GetDaysWithEntries">
+      <input message="s0:GetDaysWithEntriesHttpGetIn" />
+      <output message="s0:GetDaysWithEntriesHttpGetOut" />
+    </operation>
+    <operation name="GetDayEntry">
+      <input message="s0:GetDayEntryHttpGetIn" />
+      <output message="s0:GetDayEntryHttpGetOut" />
+    </operation>
+    <operation name="GetDayExtra">
+      <input message="s0:GetDayExtraHttpGetIn" />
+      <output message="s0:GetDayExtraHttpGetOut" />
+    </operation>
+  </portType>
+  <portType name="BlogXBrowsingHttpPost">
+    <operation name="GetRssUrl">
+      <input message="s0:GetRssUrlHttpPostIn" />
+      <output message="s0:GetRssUrlHttpPostOut" />
+    </operation>
+    <operation name="GetRss">
+      <input message="s0:GetRssHttpPostIn" />
+      <output message="s0:GetRssHttpPostOut" />
+    </operation>
+    <operation name="GetRssCategory">
+      <input message="s0:GetRssCategoryHttpPostIn" />
+      <output message="s0:GetRssCategoryHttpPostOut" />
+    </operation>
+    <operation name="GetRssWithDayCount">
+      <input message="s0:GetRssWithDayCountHttpPostIn" />
+      <output message="s0:GetRssWithDayCountHttpPostOut" />
+    </operation>
+    <operation name="GetReferrerLog">
+      <input message="s0:GetReferrerLogHttpPostIn" />
+      <output message="s0:GetReferrerLogHttpPostOut" />
+    </operation>
+    <operation name="GetCategoryList">
+      <input message="s0:GetCategoryListHttpPostIn" />
+      <output message="s0:GetCategoryListHttpPostOut" />
+    </operation>
+    <operation name="GetCategoryEntries">
+      <input message="s0:GetCategoryEntriesHttpPostIn" />
+      <output message="s0:GetCategoryEntriesHttpPostOut" />
+    </operation>
+    <operation name="GetDaysWithEntries">
+      <input message="s0:GetDaysWithEntriesHttpPostIn" />
+      <output message="s0:GetDaysWithEntriesHttpPostOut" />
+    </operation>
+    <operation name="GetDayEntry">
+      <input message="s0:GetDayEntryHttpPostIn" />
+      <output message="s0:GetDayEntryHttpPostOut" />
+    </operation>
+    <operation name="GetDayExtra">
+      <input message="s0:GetDayExtraHttpPostIn" />
+      <output message="s0:GetDayExtraHttpPostOut" />
+    </operation>
+  </portType>
+  <binding name="BlogXBrowsingSoap" type="s0:BlogXBrowsingSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="GetRssUrl">
+      <soap:operation soapAction="http://www.simplegeek.com/GetRssUrl" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetRss">
+      <soap:operation soapAction="http://www.simplegeek.com/GetRss" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetRssCategory">
+      <soap:operation soapAction="http://www.simplegeek.com/GetRssCategory" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetRssWithDayCount">
+      <soap:operation soapAction="http://www.simplegeek.com/GetRssWithDayCount" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetReferrerLog">
+      <soap:operation soapAction="http://www.simplegeek.com/GetReferrerLog" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetCategoryList">
+      <soap:operation soapAction="http://www.simplegeek.com/GetCategoryList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetCategoryEntries">
+      <soap:operation soapAction="http://www.simplegeek.com/GetCategoryEntries" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetDaysWithEntries">
+      <soap:operation soapAction="http://www.simplegeek.com/GetDaysWithEntries" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetDayEntry">
+      <soap:operation soapAction="http://www.simplegeek.com/GetDayEntry" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetDayExtra">
+      <soap:operation soapAction="http://www.simplegeek.com/GetDayExtra" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AddComment">
+      <soap:operation soapAction="http://www.simplegeek.com/AddComment" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="BlogXBrowsingHttpGet" type="s0:BlogXBrowsingHttpGet">
+    <http:binding verb="GET" />
+    <operation name="GetRssUrl">
+      <http:operation location="/GetRssUrl" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetRss">
+      <http:operation location="/GetRss" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:content part="Body" type="text/xml" />
+      </output>
+    </operation>
+    <operation name="GetRssCategory">
+      <http:operation location="/GetRssCategory" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:content part="Body" type="text/xml" />
+      </output>
+    </operation>
+    <operation name="GetRssWithDayCount">
+      <http:operation location="/GetRssWithDayCount" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:content part="Body" type="text/xml" />
+      </output>
+    </operation>
+    <operation name="GetReferrerLog">
+      <http:operation location="/GetReferrerLog" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetCategoryList">
+      <http:operation location="/GetCategoryList" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetCategoryEntries">
+      <http:operation location="/GetCategoryEntries" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetDaysWithEntries">
+      <http:operation location="/GetDaysWithEntries" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetDayEntry">
+      <http:operation location="/GetDayEntry" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetDayExtra">
+      <http:operation location="/GetDayExtra" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="BlogXBrowsingHttpPost" type="s0:BlogXBrowsingHttpPost">
+    <http:binding verb="POST" />
+    <operation name="GetRssUrl">
+      <http:operation location="/GetRssUrl" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetRss">
+      <http:operation location="/GetRss" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:content part="Body" type="text/xml" />
+      </output>
+    </operation>
+    <operation name="GetRssCategory">
+      <http:operation location="/GetRssCategory" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:content part="Body" type="text/xml" />
+      </output>
+    </operation>
+    <operation name="GetRssWithDayCount">
+      <http:operation location="/GetRssWithDayCount" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:content part="Body" type="text/xml" />
+      </output>
+    </operation>
+    <operation name="GetReferrerLog">
+      <http:operation location="/GetReferrerLog" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetCategoryList">
+      <http:operation location="/GetCategoryList" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetCategoryEntries">
+      <http:operation location="/GetCategoryEntries" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetDaysWithEntries">
+      <http:operation location="/GetDaysWithEntries" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetDayEntry">
+      <http:operation location="/GetDayEntry" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetDayExtra">
+      <http:operation location="/GetDayExtra" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <service name="BlogXBrowsing">
+    <port name="BlogXBrowsingSoap" binding="s0:BlogXBrowsingSoap">
+      <soap:address location="http://localhost/weblogx/blogxbrowsing.asmx" />
+    </port>
+    <port name="BlogXBrowsingHttpGet" binding="s0:BlogXBrowsingHttpGet">
+      <http:address location="http://localhost/weblogx/blogxbrowsing.asmx" />
+    </port>
+    <port name="BlogXBrowsingHttpPost" binding="s0:BlogXBrowsingHttpPost">
+      <http:address location="http://localhost/weblogx/blogxbrowsing.asmx" />
+    </port>
+  </service>
+</definitions>

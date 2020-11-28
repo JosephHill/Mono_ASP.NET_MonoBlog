@@ -1,0 +1,57 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogCmd", "BlogCmd\BlogCmd.csproj", "{D0497964-10A1-4F71-8476-B9B2AB27130B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogXRuntime", "BlogXRuntime\BlogXRuntime.csproj", "{2B6D1F60-C5D8-4CB9-89D6-A4AF42275852}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeblogX", "http://localhost/WeblogX/WeblogX.csproj", "{F33CF374-8610-434F-B4FB-915AE7CD17DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogXServiceProxy", "BlogXServiceProxy\BlogXServiceProxy.csproj", "{56A3F488-5023-441C-88BA-E31652022E2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinBlogX", "WinBlogX\WinBlogX.csproj", "{490BD6EB-9D5E-4697-8439-D91FBA84FBEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinBlogXControls", "WinBlogXControls\WinBlogXControls.csproj", "{5A40FE4D-57E5-4086-9EB8-FE82D3666595}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogXUploaderTest", "BlogXUploaderTest\BlogXUploaderTest.csproj", "{E1D9BC4A-5417-4F8A-AE2B-CC737AD2F4EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{D0497964-10A1-4F71-8476-B9B2AB27130B}.Debug.ActiveCfg = Debug|.NET
+		{D0497964-10A1-4F71-8476-B9B2AB27130B}.Debug.Build.0 = Debug|.NET
+		{D0497964-10A1-4F71-8476-B9B2AB27130B}.Release.ActiveCfg = Release|.NET
+		{D0497964-10A1-4F71-8476-B9B2AB27130B}.Release.Build.0 = Release|.NET
+		{2B6D1F60-C5D8-4CB9-89D6-A4AF42275852}.Debug.ActiveCfg = Debug|.NET
+		{2B6D1F60-C5D8-4CB9-89D6-A4AF42275852}.Debug.Build.0 = Debug|.NET
+		{2B6D1F60-C5D8-4CB9-89D6-A4AF42275852}.Release.ActiveCfg = Release|.NET
+		{2B6D1F60-C5D8-4CB9-89D6-A4AF42275852}.Release.Build.0 = Release|.NET
+		{F33CF374-8610-434F-B4FB-915AE7CD17DA}.Debug.ActiveCfg = Debug|.NET
+		{F33CF374-8610-434F-B4FB-915AE7CD17DA}.Debug.Build.0 = Debug|.NET
+		{F33CF374-8610-434F-B4FB-915AE7CD17DA}.Release.ActiveCfg = Release|.NET
+		{F33CF374-8610-434F-B4FB-915AE7CD17DA}.Release.Build.0 = Release|.NET
+		{56A3F488-5023-441C-88BA-E31652022E2C}.Debug.ActiveCfg = Debug|.NET
+		{56A3F488-5023-441C-88BA-E31652022E2C}.Debug.Build.0 = Debug|.NET
+		{56A3F488-5023-441C-88BA-E31652022E2C}.Release.ActiveCfg = Release|.NET
+		{56A3F488-5023-441C-88BA-E31652022E2C}.Release.Build.0 = Release|.NET
+		{490BD6EB-9D5E-4697-8439-D91FBA84FBEB}.Debug.ActiveCfg = Debug|.NET
+		{490BD6EB-9D5E-4697-8439-D91FBA84FBEB}.Debug.Build.0 = Debug|.NET
+		{490BD6EB-9D5E-4697-8439-D91FBA84FBEB}.Release.ActiveCfg = Release|.NET
+		{490BD6EB-9D5E-4697-8439-D91FBA84FBEB}.Release.Build.0 = Release|.NET
+		{5A40FE4D-57E5-4086-9EB8-FE82D3666595}.Debug.ActiveCfg = Debug|.NET
+		{5A40FE4D-57E5-4086-9EB8-FE82D3666595}.Debug.Build.0 = Debug|.NET
+		{5A40FE4D-57E5-4086-9EB8-FE82D3666595}.Release.ActiveCfg = Release|.NET
+		{5A40FE4D-57E5-4086-9EB8-FE82D3666595}.Release.Build.0 = Release|.NET
+		{E1D9BC4A-5417-4F8A-AE2B-CC737AD2F4EB}.Debug.ActiveCfg = Debug|.NET
+		{E1D9BC4A-5417-4F8A-AE2B-CC737AD2F4EB}.Debug.Build.0 = Debug|.NET
+		{E1D9BC4A-5417-4F8A-AE2B-CC737AD2F4EB}.Release.ActiveCfg = Release|.NET
+		{E1D9BC4A-5417-4F8A-AE2B-CC737AD2F4EB}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

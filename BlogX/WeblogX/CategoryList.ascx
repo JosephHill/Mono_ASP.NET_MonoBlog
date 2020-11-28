@@ -1,0 +1,1 @@
+<%@ Control Language="c#" AutoEventWireup="false" Codebehind="CategoryList.ascx.cs" Inherits="Anderson.Chris.BlogX.WebClient.CategoryList" TargetSchema="http://schemas.microsoft.com/intellisense/ie5"%>

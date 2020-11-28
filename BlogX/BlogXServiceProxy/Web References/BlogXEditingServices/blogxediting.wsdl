@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.simplegeek.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://www.simplegeek.com" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.simplegeek.com">
+      <s:element name="CanEdit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CanEditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CanEditResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteEntry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entryId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteEntryResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateEntry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entry" type="s0:Entry" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Entry">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:EntryBase">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Categories" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="EntryBase">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Content" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Created" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Modified" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="EntryId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateEntryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateEntryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateEntry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entry" type="s0:Entry" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateEntryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateEntryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+  </types>
+  <message name="CanEditSoapIn">
+    <part name="parameters" element="s0:CanEdit" />
+  </message>
+  <message name="CanEditSoapOut">
+    <part name="parameters" element="s0:CanEditResponse" />
+  </message>
+  <message name="DeleteEntrySoapIn">
+    <part name="parameters" element="s0:DeleteEntry" />
+  </message>
+  <message name="DeleteEntrySoapOut">
+    <part name="parameters" element="s0:DeleteEntryResponse" />
+  </message>
+  <message name="UpdateEntrySoapIn">
+    <part name="parameters" element="s0:UpdateEntry" />
+  </message>
+  <message name="UpdateEntrySoapOut">
+    <part name="parameters" element="s0:UpdateEntryResponse" />
+  </message>
+  <message name="CreateEntrySoapIn">
+    <part name="parameters" element="s0:CreateEntry" />
+  </message>
+  <message name="CreateEntrySoapOut">
+    <part name="parameters" element="s0:CreateEntryResponse" />
+  </message>
+  <message name="CanEditHttpGetIn">
+    <part name="username" type="s:string" />
+    <part name="password" type="s:string" />
+  </message>
+  <message name="CanEditHttpGetOut">
+    <part name="Body" element="s0:boolean" />
+  </message>
+  <message name="DeleteEntryHttpGetIn">
+    <part name="entryId" type="s:string" />
+    <part name="username" type="s:string" />
+    <part name="password" type="s:string" />
+  </message>
+  <message name="DeleteEntryHttpGetOut" />
+  <message name="CanEditHttpPostIn">
+    <part name="username" type="s:string" />
+    <part name="password" type="s:string" />
+  </message>
+  <message name="CanEditHttpPostOut">
+    <part name="Body" element="s0:boolean" />
+  </message>
+  <message name="DeleteEntryHttpPostIn">
+    <part name="entryId" type="s:string" />
+    <part name="username" type="s:string" />
+    <part name="password" type="s:string" />
+  </message>
+  <message name="DeleteEntryHttpPostOut" />
+  <portType name="BlogXEditingSoap">
+    <operation name="CanEdit">
+      <input message="s0:CanEditSoapIn" />
+      <output message="s0:CanEditSoapOut" />
+    </operation>
+    <operation name="DeleteEntry">
+      <input message="s0:DeleteEntrySoapIn" />
+      <output message="s0:DeleteEntrySoapOut" />
+    </operation>
+    <operation name="UpdateEntry">
+      <input message="s0:UpdateEntrySoapIn" />
+      <output message="s0:UpdateEntrySoapOut" />
+    </operation>
+    <operation name="CreateEntry">
+      <input message="s0:CreateEntrySoapIn" />
+      <output message="s0:CreateEntrySoapOut" />
+    </operation>
+  </portType>
+  <portType name="BlogXEditingHttpGet">
+    <operation name="CanEdit">
+      <input message="s0:CanEditHttpGetIn" />
+      <output message="s0:CanEditHttpGetOut" />
+    </operation>
+    <operation name="DeleteEntry">
+      <input message="s0:DeleteEntryHttpGetIn" />
+      <output message="s0:DeleteEntryHttpGetOut" />
+    </operation>
+  </portType>
+  <portType name="BlogXEditingHttpPost">
+    <operation name="CanEdit">
+      <input message="s0:CanEditHttpPostIn" />
+      <output message="s0:CanEditHttpPostOut" />
+    </operation>
+    <operation name="DeleteEntry">
+      <input message="s0:DeleteEntryHttpPostIn" />
+      <output message="s0:DeleteEntryHttpPostOut" />
+    </operation>
+  </portType>
+  <binding name="BlogXEditingSoap" type="s0:BlogXEditingSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="CanEdit">
+      <soap:operation soapAction="http://www.simplegeek.com/CanEdit" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DeleteEntry">
+      <soap:operation soapAction="http://www.simplegeek.com/DeleteEntry" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UpdateEntry">
+      <soap:operation soapAction="http://www.simplegeek.com/UpdateEntry" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CreateEntry">
+      <soap:operation soapAction="http://www.simplegeek.com/CreateEntry" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="BlogXEditingHttpGet" type="s0:BlogXEditingHttpGet">
+    <http:binding verb="GET" />
+    <operation name="CanEdit">
+      <http:operation location="/CanEdit" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="DeleteEntry">
+      <http:operation location="/DeleteEntry" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output />
+    </operation>
+  </binding>
+  <binding name="BlogXEditingHttpPost" type="s0:BlogXEditingHttpPost">
+    <http:binding verb="POST" />
+    <operation name="CanEdit">
+      <http:operation location="/CanEdit" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="DeleteEntry">
+      <http:operation location="/DeleteEntry" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output />
+    </operation>
+  </binding>
+  <service name="BlogXEditing">
+    <port name="BlogXEditingSoap" binding="s0:BlogXEditingSoap">
+      <soap:address location="http://localhost/weblogx/blogxediting.asmx" />
+    </port>
+    <port name="BlogXEditingHttpGet" binding="s0:BlogXEditingHttpGet">
+      <http:address location="http://localhost/weblogx/blogxediting.asmx" />
+    </port>
+    <port name="BlogXEditingHttpPost" binding="s0:BlogXEditingHttpPost">
+      <http:address location="http://localhost/weblogx/blogxediting.asmx" />
+    </port>
+  </service>
+</definitions>

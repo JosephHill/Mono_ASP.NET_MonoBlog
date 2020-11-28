@@ -1,0 +1,1 @@
+<%@ Control Language="c#" AutoEventWireup="false" Codebehind="FormatControl.ascx.cs" Inherits="Anderson.Chris.BlogX.WebClient.FormatControl" TargetSchema="http://schemas.microsoft.com/intellisense/ie5"%>

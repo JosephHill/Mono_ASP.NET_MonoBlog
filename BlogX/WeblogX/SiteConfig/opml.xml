@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opml>
+  <body>
+    <outline title="simplegeek" description="" xmlUrl="http://www.simplegeek.com/BlogxBrowsing.asmx/GetRss?" htmlUrl="http://www.simplegeek.com" />
+    <outline title="Don Box's Spoutlet" description="Rants from the SOAP box" xmlUrl="http://www.gotdotnet.com/team/dbox/rssex.aspx" htmlUrl="http://www.gotdotnet.com/team/dbox/default.aspx" language="en" />
+  </body>
+</opml>

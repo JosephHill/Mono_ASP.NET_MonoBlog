@@ -1,0 +1,588 @@
+<VisualStudioProject>
+    <CSHARP
+        ProjectType = "Web"
+        ProductVersion = "7.0.9466"
+        SchemaVersion = "1.0"
+        ProjectGuid = "{F33CF374-8610-434F-B4FB-915AE7CD17DA}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "WeblogX"
+                AssemblyOriginatorKeyFile = ""
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                RootNamespace = "Anderson.Chris.BlogX.WebClient"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "DEBUG;TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "true"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "true"
+                    Optimize = "false"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+                <Config
+                    Name = "Release"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "false"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    Optimize = "true"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                    HintPath = "..\..\..\WINDOWS\Microsoft.NET\Framework\v1.0.3705\System.dll"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                    HintPath = "..\..\..\WINDOWS\Microsoft.NET\Framework\v1.0.3705\System.Drawing.dll"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                    HintPath = "..\..\..\WINDOWS\Microsoft.NET\Framework\v1.0.3705\System.Data.dll"
+                />
+                <Reference
+                    Name = "System.Web"
+                    AssemblyName = "System.Web"
+                    HintPath = "..\..\..\WINDOWS\Microsoft.NET\Framework\v1.0.3705\System.Web.dll"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                    HintPath = "..\..\..\WINDOWS\Microsoft.NET\Framework\v1.0.3705\System.XML.dll"
+                />
+                <Reference
+                    Name = "BlogXRuntime"
+                    Project = "{2B6D1F60-C5D8-4CB9-89D6-A4AF42275852}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
+                <Reference
+                    Name = "System.Web.Services"
+                    AssemblyName = "System.Web.Services"
+                    HintPath = "..\..\..\WINDOWS\Microsoft.NET\Framework\v1.0.3705\System.Web.Services.dll"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AdminNavBar.ascx"
+                    SubType = "UserControl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "AdminNavBar.ascx.cs"
+                    DependentUpon = "AdminNavBar.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "AdminNavBar.ascx.resx"
+                    DependentUpon = "AdminNavBar.ascx.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "AssemblyInfo.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "blogx.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "blogx.aspx.cs"
+                    DependentUpon = "blogx.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "blogx.aspx.resx"
+                    DependentUpon = "blogx.aspx.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "BlogXBrowsing.asmx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "BlogXBrowsing.asmx.cs"
+                    DependentUpon = "BlogXBrowsing.asmx"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BlogXBrowsing.asmx.resx"
+                    DependentUpon = "BlogXBrowsing.asmx.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "BlogXEditing.asmx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "BlogXEditing.asmx.cs"
+                    DependentUpon = "BlogXEditing.asmx"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BlogXEditing.asmx.resx"
+                    DependentUpon = "BlogXEditing.asmx.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "BlogXFooter.ascx"
+                    SubType = "UserControl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "BlogXFooter.ascx.cs"
+                    DependentUpon = "BlogXFooter.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BlogXFooter.ascx.resx"
+                    DependentUpon = "BlogXFooter.ascx.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "BlogXHeader.ascx"
+                    SubType = "UserControl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "BlogXHeader.ascx.cs"
+                    DependentUpon = "BlogXHeader.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BlogXHeader.ascx.resx"
+                    DependentUpon = "BlogXHeader.ascx.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "BlogXUtils.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "CategoryList.ascx"
+                    SubType = "UserControl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "CategoryList.ascx.cs"
+                    DependentUpon = "CategoryList.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "CategoryList.ascx.resx"
+                    DependentUpon = "CategoryList.ascx.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "CategoryView.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "CategoryView.aspx.cs"
+                    DependentUpon = "CategoryView.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "CategoryView.aspx.resx"
+                    DependentUpon = "CategoryView.aspx.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "CommentView.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "CommentView.aspx.cs"
+                    DependentUpon = "CommentView.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "CommentView.aspx.resx"
+                    DependentUpon = "CommentView.aspx.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ConfigEditing.asmx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ConfigEditing.asmx.cs"
+                    DependentUpon = "ConfigEditing.asmx"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ConfigEditing.asmx.resx"
+                    DependentUpon = "ConfigEditing.asmx.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "default.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "default.aspx.cs"
+                    DependentUpon = "default.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "default.aspx.resx"
+                    DependentUpon = "default.aspx.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "EntryEdit.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "EntryEdit.aspx.cs"
+                    DependentUpon = "EntryEdit.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "EntryEdit.aspx.resx"
+                    DependentUpon = "EntryEdit.aspx.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "EntryView.ascx"
+                    SubType = "UserControl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "EntryView.ascx.cs"
+                    DependentUpon = "EntryView.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "EntryView.ascx.resx"
+                    DependentUpon = "EntryView.ascx.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FormatControl.ascx"
+                    SubType = "UserControl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "FormatControl.ascx.cs"
+                    DependentUpon = "FormatControl.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FormatControl.ascx.resx"
+                    DependentUpon = "FormatControl.ascx.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FormatPage.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "FormatPage.aspx.cs"
+                    DependentUpon = "FormatPage.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FormatPage.aspx.resx"
+                    DependentUpon = "FormatPage.aspx.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Global.asax"
+                    SubType = "Component"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Global.asax.cs"
+                    DependentUpon = "Global.asax"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Global.asax.resx"
+                    DependentUpon = "Global.asax.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "license.txt"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Opml.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "PermaLink.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "PermaLink.aspx.cs"
+                    DependentUpon = "PermaLink.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "PermaLink.aspx.resx"
+                    DependentUpon = "PermaLink.aspx.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Referrers.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Referrers.aspx.cs"
+                    DependentUpon = "Referrers.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Referrers.aspx.resx"
+                    DependentUpon = "Referrers.aspx.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "SideBarList.ascx"
+                    SubType = "UserControl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "SideBarList.ascx.cs"
+                    DependentUpon = "SideBarList.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SideBarList.ascx.resx"
+                    DependentUpon = "SideBarList.ascx.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "SideBarOpmlList.ascx"
+                    SubType = "UserControl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "SideBarOpmlList.ascx.cs"
+                    DependentUpon = "SideBarOpmlList.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SideBarOpmlList.ascx.resx"
+                    DependentUpon = "SideBarOpmlList.ascx.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "SignIn.ascx"
+                    SubType = "UserControl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "SignIn.ascx.cs"
+                    DependentUpon = "SignIn.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SignIn.ascx.resx"
+                    DependentUpon = "SignIn.ascx.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "SingleCommentView.ascx"
+                    SubType = "UserControl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "SingleCommentView.ascx.cs"
+                    DependentUpon = "SingleCommentView.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SingleCommentView.ascx.resx"
+                    DependentUpon = "SingleCommentView.ascx.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "SiteConfig.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SiteSecurity.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "VerifyImageGen.ashx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "VerifyImageGen.asmx.cs"
+                    DependentUpon = "VerifyImageGen.ashx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "VerifyImageGen.asmx.resx"
+                    DependentUpon = "VerifyImageGen.asmx.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Web.config"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "WeblogX.vsdisco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DefaultSiteConfig\accessdenied.format.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DefaultSiteConfig\blogfooter.format.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DefaultSiteConfig\blogtitle.format.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DefaultSiteConfig\blogx.css"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DefaultSiteConfig\commentwords.txt"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DefaultSiteConfig\disclaimer.format.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DefaultSiteConfig\links.xml"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DefaultSiteConfig\opml.xml"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DefaultSiteConfig\site.config"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DefaultSiteConfig\siteSecurity.config"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "SiteConfig\accessdenied.format.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "SiteConfig\blogfooter.format.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "SiteConfig\blogtitle.format.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "SiteConfig\blogx.css"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "SiteConfig\commentwords.txt"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "SiteConfig\disclaimer.format.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "SiteConfig\links.xml"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "SiteConfig\opml.xml"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "SiteConfig\site.config"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "SiteConfig\siteSecurity.config"
+                    BuildAction = "Content"
+                />
+            </Include>
+        </Files>
+    </CSHARP>
+</VisualStudioProject>
+

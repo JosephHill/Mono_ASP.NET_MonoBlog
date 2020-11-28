@@ -1,0 +1,289 @@
+body
+{
+  font-family:Trebuchet, Sans-Serif;
+  font-size: 9pt;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+p
+{
+  line-height: 1.25em;
+}
+
+a
+{
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover
+{
+  text-decoration: underline;
+}
+
+/* Maintain formatting in tags which don't inherit normally */
+table, input, select, textarea
+{
+  font-family: Trebuchet, Sans-Serif;
+  font-size: 1em;  
+}
+
+input, select, textarea
+{
+  vertical-align: middle;
+}
+
+/* Weblog title and byline */
+div#header
+{
+  background: tan;
+  color: black;
+  padding: .5em 0;
+  margin-bottom: 1em;
+}
+
+div#header p#sideTitle
+{
+    float:right;
+    padding-right:3px;
+}
+
+h1#title, p#byline
+{
+  margin: 0 12px;
+}
+
+p#byline
+{
+  font-style: italic;
+}
+
+
+
+/* Entries */
+div#content
+{
+  margin: .5em 1.5em;
+  width: 60%;
+  float: left;
+}
+
+/* Date  */
+div.date
+{
+  padding: 0;
+  margin-bottom: 1em;
+}
+
+div.date h2
+{
+  text-align: left;
+  font-style: italic;
+  font-size: 1.6em;
+  margin: 0 0 1em 0em;
+}
+
+div.entry
+{
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1em;
+}
+
+h3.entryTitle
+{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family:Verdana;
+  font-size: 1.2em;
+  background: #eee;
+  color: black;
+  padding: .2em;
+}
+
+div.entryBody
+{
+  padding: .5em;
+}
+
+div.entryBody p
+{
+  margin-top: .2em;
+}
+
+
+p.permalink
+{
+  float: right;
+}
+
+p.entryFooter
+{
+  font-size: .9em;
+  text-align: right;
+  margin: .5em;
+}
+
+span.permalink, span.categories, span.comments
+{  
+  color: #999;
+}
+
+span.permalink a, span.categories a, span.comments a
+{
+  color: #999;
+}
+
+p.categories
+{
+  float: right;
+  padding-right: 1em;
+}
+
+p.comments
+{
+}
+
+
+
+
+/* Calendar and Blog roll */
+div.sidebar
+{
+  font-size: smaller;
+  float: left;
+}
+
+div.sidebar ul
+{
+  list-style: none;
+  margin: .5em;
+}
+
+div.section
+{
+  margin: .5em 2em;
+  margin-bottom: 2em;
+  border: 1px solid #ccc;
+}
+
+div.section h3
+{
+  text-transform:uppercase;
+  margin: 0;
+  background: #eee;
+  padding: .2em;
+  font-size: 1.2em;
+}
+
+/* Calendar stuff */
+table.blogCal a
+{
+  color: #666;
+}
+
+
+table.navCalendar table td 
+{
+    font-size:8pt;
+}
+
+.navTodayStyle
+{
+  background:#eee;
+}
+.navSelectorStyle
+{
+  background:#eee;
+}
+.navDayStyle
+{
+}
+.navNextPrevStyle
+{
+  vertical-align:baseline;
+
+}
+.navDayHeader
+{
+  font-weight:bold;
+}
+.navSelectedDayStyle
+{
+  font-weight:bold;
+}
+.navTitleStyle
+{
+  font-weight:bold;
+}
+.navWeekendDayStyle
+{
+
+}
+.navOtherMonthDayStyle
+{
+  background:#f3f3f3;
+}
+.navCalendar
+{
+  border-color:#eee;
+}
+
+
+
+div.section form
+{
+  margin: .5em;
+}
+
+div#login p
+{
+  margin: .2em 0;  
+}
+
+
+/* Copyright messages */
+div#footer
+{
+  clear: both;
+  font-size: smaller;
+  margin: .5em 2em;
+  padding: .5em 2em;
+}
+
+div#footer p
+{
+  margin: .2em 0;
+}
+a.standardsButton
+{
+    border:1px solid;
+    border-color:#ffc8a4 #7d3302 #3f1a01 #ff9a57;
+    padding:0px 3px 0px 3px;
+    font:bold 10px verdana,sans-serif; 
+    color:#FFFFFF; background-color:#ff6600;
+    text-decoration:none;
+    margin:0px;
+}
+a.standardsButton:hover
+{
+    border:1px solid;
+    border-color:#ffc8a4 #7d3302 #3f1a01 #ff9a57;
+    padding:0px 3px 0px 3px;
+    font:bold 10px verdana,sans-serif; 
+    color:#FFFFFF; background-color:#ff6600;
+    text-decoration:none;
+    margin:0px;
+}
+a.standardsButton:visited
+{
+    border:1px solid;
+    border-color:#ffc8a4 #7d3302 #3f1a01 #ff9a57;
+    padding:0px 3px 0px 3px;
+    font:bold 10px verdana,sans-serif; 
+    color:#FFFFFF; background-color:#ff6600;
+    text-decoration:none;
+    margin:0px;
+}
